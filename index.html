@@ -1,0 +1,169 @@
+<!-- Copyright (C) 2023-2025 anonymous
+
+This file is part of PSFree.
+
+PSFree is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as
+published by the Free Software Foundation, either version 3 of the
+License, or (at your option) any later version.
+
+PSFree is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>PSFree v1.5.0 - PS4/PS5 Exploit</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/styles.css">
+        <style>
+            @font-face {
+                font-family: 'Liberation Mono';
+                src: url('fonts/LiberationMono-Regular.ttf');
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header">
+                <h1>PSFree v1.5.0</h1>
+                <p>PS4/PS5 Exploit Chain</p>
+            </div>
+
+            <div class="card">
+                <h2 class="card-title">Status</h2>
+                <div id="status-container">
+                    <p><span class="status-indicator status-running" id="status-icon"></span> <span id="status-text">Running exploit...</span></p>
+                    <div class="progress-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                </div>
+                <!-- Run exploit and reset buttons removed -->
+            </div>
+
+            <div class="tabs">
+                <div class="tab active" data-tab="console">Console</div>
+                <!-- Payloads and settings tabs removed -->
+            </div>
+
+            <div class="tab-content active" id="tab-console">
+                <pre id="console"></pre>
+            </div>
+
+            <!-- Payloads and settings tabs removed -->
+
+            <!-- Info content moved below console -->
+            <div class="card" style="margin-top: 20px;">
+                <h2 class="card-title">About PSFree</h2>
+            
+                </ul>
+               
+            </div>
+
+            <div class="card" style="margin-top: 20px;">
+                <h2 class="card-title">Quick Guide</h2>
+                <ol>
+             
+               
+            </div>
+        </div>
+
+        <script src="js/remote-logger.js"></script>
+        <script src="js/payload-manager.js"></script>
+        <script src="js/ui.js"></script>
+        <script src="payload.js"></script>
+        <script>
+            // Initialize Remote Logger
+            document.addEventListener('DOMContentLoaded', function() {
+                // Try to get server IP from URL parameter
+                const urlParams = new URLSearchParams(window.location.search);
+                const serverIp = urlParams.get('server');
+
+                // Logger configuration
+                const loggerConfig = {
+                    enabled: true,
+                    localConsole: true
+                };
+
+                // If a server parameter is present, use it
+                if (serverIp) {
+                    loggerConfig.serverUrl = `http://${serverIp}:3000`;
+                }
+
+                // Initialize logger
+                window.RemoteLogger.init(loggerConfig);
+
+                // Log browser info
+                window.RemoteLogger.info('PSFree initialized', {
+                    userAgent: navigator.userAgent,
+                    url: window.location.href,
+                    timestamp: new Date().toISOString()
+                });
+            });
+        </script>
+        <script type="module" src="./alert.mjs"></script>
+    </body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>عصر المهندس</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background-image: url('3D%20Logo%20Mockup%20Design%20-%202025-03-13T155706.400%20(2).jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-repeat: no-repeat;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.4);
+    }
+    h1 {
+      font-size: 48px;
+      color: gold;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    .magic {
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 15px #0ff;
+      }
+      to {
+        text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 30px #0ff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1 class="magic">عصر المهندس</h1>
+    <p>الهاتف: 07800011226</p>
+    <p>العنوان: الأنبار - الفلوجة - حي العسكري</p>
+  </div>
+</body>
+</html>
